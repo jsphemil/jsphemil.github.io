@@ -33,7 +33,7 @@ main{width:min(100% - 32px, 620px);margin:0 auto;padding:28px 0 30px}
   transition:transform .2s,background .2s;
 }
 .theme:hover{transform:rotate(10deg) scale(1.05);background:var(--hover)}
-.profile{text-align:center;padding:10px 18px 22px}
+.profile{text-align:center;padding:10px 18px 24px}
 .avatar{
   width:104px;height:104px;border-radius:50%;display:block;margin:0 auto 17px;
   object-fit:cover;border:3px solid var(--surface);box-shadow:0 8px 30px rgba(0,0,0,.12);
@@ -41,7 +41,7 @@ main{width:min(100% - 32px, 620px);margin:0 auto;padding:28px 0 30px}
 h1{font-size:28px;letter-spacing:-.035em;margin:0 0 7px;font-weight:720}
 .handle{color:var(--muted);font-size:14px;margin:0 0 12px}
 .bio{max-width:430px;margin:0 auto;color:var(--muted);font-size:15px;line-height:1.55}
-.links{display:grid;gap:12px}
+.section-label{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin:0 0 9px 4px}.links{display:grid;gap:12px}
 .link{
   min-height:66px;display:flex;align-items:center;gap:14px;padding:13px 17px;
   text-decoration:none;color:var(--text);background:var(--surface);border:1px solid var(--border);
@@ -59,7 +59,7 @@ h1{font-size:28px;letter-spacing:-.035em;margin:0 0 7px;font-weight:720}
 .desc{display:block;color:var(--muted);font-size:12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .arrow{color:var(--muted);font-size:18px;transition:transform .2s}
 .link:hover .arrow{transform:translateX(3px);color:var(--accent)}
-.socials{display:flex;justify-content:center;gap:10px;margin:23px 0 8px}
+.current{margin-top:25px}.building{display:flex;align-items:center;gap:14px;padding:15px 17px;text-decoration:none;color:var(--text);background:transparent;border:1px dashed var(--border);border-radius:18px;transition:background .2s,border-color .2s,transform .2s}.building:hover{background:var(--surface);border-color:rgba(45,95,85,.28);transform:translateY(-2px)}.building .icon{background:rgba(45,95,85,.07)}.badge{display:inline-flex;align-items:center;gap:6px;color:var(--accent);font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-bottom:3px}.dot{width:6px;height:6px;border-radius:50%;background:currentColor}.building .title{font-size:14px}.building .desc{font-size:12px}.socials{display:flex;justify-content:center;gap:10px;margin:23px 0 8px}
 .social{
   width:42px;height:42px;border:1px solid var(--border);border-radius:50%;display:grid;place-items:center;
   color:var(--muted);background:transparent;text-decoration:none;transition:.2s
@@ -84,7 +84,7 @@ footer{text-align:center;color:var(--muted);font-size:11px;margin-top:18px}
     <p class="bio">Manager by day. Indie developer by night. Building useful things, learning in public, and exploring AI.</p>
   </section>
 
-  <section class="links" aria-label="Featured links">
+  <section aria-labelledby="featured-heading">\n    <p class="section-label" id="featured-heading">Featured</p>\n    <div class="links">
     <a class="link" href="https://github.com/jsphemil/spending-tracker-mobile" target="_blank" rel="noopener">
       <span class="icon"><svg viewBox="0 0 24 24"><path d="M12 .5a12 12 0 0 0-3.79 23.39c.6.11.82-.26.82-.58v-2.05c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.75.08-.74.08-.74 1.2.08 1.84 1.23 1.84 1.23 1.07 1.83 2.8 1.3 3.49.99.11-.77.42-1.3.76-1.6-2.67-.3-5.47-1.34-5.47-5.95 0-1.31.47-2.38 1.23-3.22-.12-.3-.53-1.52.12-3.17 0 0 1-.32 3.3 1.23a11.4 11.4 0 0 1 6 0c2.3-1.55 3.3-1.23 3.3-1.23.65 1.65.24 2.87.12 3.17.77.84 1.23 1.91 1.23 3.22 0 4.62-2.81 5.65-5.49 5.94.43.37.81 1.1.81 2.22v3.29c0 .32.22.69.83.58A12 12 0 0 0 12 .5Z"/></svg></span>
       <span class="copy"><span class="title">Erebor Wealth Management</span><span class="desc">My flagship local-first personal finance app</span></span><span class="arrow">→</span>
@@ -97,11 +97,7 @@ footer{text-align:center;color:var(--muted);font-size:11px;margin-top:18px}
       <span class="icon"><svg viewBox="0 0 24 24"><path d="M4 4h16v16H4V4Zm3 3v10h2V7H7Zm4 0v10h2V7h-2Zm4 0v10h2V7h-2Z"/></svg></span>
       <span class="copy"><span class="title">HF Model Scout</span><span class="desc">Search, filter and compare Hugging Face models</span></span><span class="arrow">→</span>
     </a>
-    <a class="link" href="https://github.com/jsphemil" target="_blank" rel="noopener">
-      <span class="icon"><svg viewBox="0 0 24 24"><path d="M12 .5a12 12 0 0 0-3.79 23.39c.6.11.82-.26.82-.58v-2.05c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.75.08-.74.08-.74 1.2.08 1.84 1.23 1.84 1.23 1.07 1.83 2.8 1.3 3.49.99.11-.77.42-1.3.76-1.6-2.67-.3-5.47-1.34-5.47-5.95 0-1.31.47-2.38 1.23-3.22-.12-.3-.53-1.52.12-3.17 0 0 1-.32 3.3 1.23a11.4 11.4 0 0 1 6 0c2.3-1.55 3.3-1.23 3.3-1.23.65 1.65.24 2.87.12 3.17.77.84 1.23 1.91 1.23 3.22 0 4.62-2.81 5.65-5.49 5.94.43.37.81 1.1.81 2.22v3.29c0 .32.22.69.83.58A12 12 0 0 0 12 .5Z"/></svg></span>
-      <span class="copy"><span class="title">GitHub</span><span class="desc">See everything I’m building and learning</span></span><span class="arrow">→</span>
-    </a>
-  </section>
+    </div>\n  </section>
 
   <nav class="socials" aria-label="Social links">
     <a class="social" href="https://github.com/jsphemil" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub"><svg viewBox="0 0 24 24"><path d="M12 .5a12 12 0 0 0-3.79 23.39c.6.11.82-.26.82-.58v-2.05c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.75.08-.74.08-.74 1.2.08 1.84 1.23 1.84 1.23 1.07 1.83 2.8 1.3 3.49.99.11-.77.42-1.3.76-1.6-2.67-.3-5.47-1.34-5.47-5.95 0-1.31.47-2.38 1.23-3.22-.12-.3-.53-1.52.12-3.17 0 0 1-.32 3.3 1.23a11.4 11.4 0 0 1 6 0c2.3-1.55 3.3-1.23 3.3-1.23.65 1.65.24 2.87.12 3.17.77.84 1.23 1.91 1.23 3.22 0 4.62-2.81 5.65-5.49 5.94.43.37.81 1.1.81 2.22v3.29c0 .32.22.69.83.58A12 12 0 0 0 12 .5Z"/></svg></a>
@@ -121,4 +117,4 @@ button.addEventListener('click',()=>{
 });
 </script>
 </body>
-</html>
+</html\n  <section class="current" aria-labelledby="building-heading">\n    <p class="section-label" id="building-heading">Currently building</p>\n    <a class="building" href="https://github.com/jsphemil/bujo-android" target="_blank" rel="noopener">\n      <span class="icon"><svg viewBox="0 0 24 24"><path d="M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Zm2 4v2h10V7H7Zm0 4v2h6v-2H7Zm0 4v2h8v-2H7Z"/></svg></span>\n      <span class="copy"><span class="badge"><span class="dot"></span> In progress</span><span class="title">Dotgrid</span><span class="desc">A minimalist bullet journal for Android</span></span><span class="arrow">→</span>\n    </a>\n  </section>\n>
