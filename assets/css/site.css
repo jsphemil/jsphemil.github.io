@@ -178,6 +178,11 @@ p{margin:0}
   .work-grid>.tile:nth-child(4n+4){grid-column:span 7}
 }
 .tile{display:block;text-decoration:none;color:inherit}
+@media (min-width:860px){
+  .work-grid>.tile:last-child:nth-child(4n+1){grid-column:1/-1}
+  .work-grid>.tile:last-child:nth-child(4n+1) .tile-media{aspect-ratio:2/1}
+  .work-grid>.tile:last-child:nth-child(4n+1) .tile-media img{object-position:50% 45%}
+}
 .tile-media{
   position:relative;overflow:hidden;border-radius:var(--radius);background:var(--bg-2);
   aspect-ratio:4/3;isolation:isolate
