@@ -148,9 +148,9 @@ p{margin:0}
 
 /* ---------- hero ---------- */
 .hero{padding:clamp(56px,10vw,140px) 0 clamp(48px,7vw,96px)}
-.hero h1{font-size:var(--step-5);font-weight:700;letter-spacing:-.055em;line-height:.95;max-width:12ch;margin-top:22px}
+.hero h1{font-size:clamp(3rem,1.6rem + 5.6vw,6.5rem);font-weight:700;letter-spacing:-.055em;line-height:.95;margin-top:22px}
 .hero h1 .line{display:block;overflow:hidden;padding-bottom:.06em}
-.hero h1 .line>span{display:inline-block}
+.hero h1 .line>span{display:inline-block;text-wrap:balance}
 .hero-sub{display:grid;gap:28px;margin-top:clamp(28px,4vw,48px);align-items:end}
 .hero-sub p{font-size:var(--step-1);color:var(--muted);max-width:42ch;line-height:1.45}
 .hero-cta{display:flex;flex-wrap:wrap;gap:12px}
